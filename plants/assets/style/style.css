@@ -463,6 +463,14 @@ html {
   margin-right: 31px;
 }
 
+/* .footer-messangers-list-img:hover {
+  fill: var(--dark-extra);
+} */
+
+.footer-messangers-list-img:hover path {
+  fill: var(--orange);
+}
+
 .footer-messangers-list li:nth-child(3) {
   margin-left: -3px;
   margin-right: 25px;
