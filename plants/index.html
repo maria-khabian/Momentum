@@ -30,7 +30,7 @@
               <li class="main-nav-item"><a class="item-link" href="#aboutUs">About us</a></li>
               <li class="main-nav-item"><a class="item-link" href="#service">Service</a></li>
               <li class="main-nav-item"><a class="item-link" href="#price">Price</a></li>
-              <li class="main-nav-item"><a class="item-link" href="#contacts">Contacts</a></li>
+              <li class="main-nav-item"><a class="item-link" href="#contact">Contacts</a></li>
             </ul>
           </nav>
         </div>
@@ -86,13 +86,17 @@
         <div class="service-top-row">
           <h2 id="service" class="service-title">Service and our projects</h2>
           <ul class="service-button-list">
-            <li class="service-button-item"><button class="button-common" type="button">Gardens</button></li>
-            <li class="service-button-item"><button class="button-common" type="button">Lawn</button></li>
-            <li class="service-button-item"><button class="button-common" type="button">Planting</button></li>
+            <li class="service-button-item">
+              <button class="button-common" type="button" data-service="Gardens">Gardens</button>
+            </li>
+            <li class="service-button-item"><button class="button-common" type="button"
+                data-service="Lawn">Lawn</button></li>
+            <li class="service-button-item"><button class="button-common" type="button"
+                data-service="Planting">Planting</button></li>
           </ul>
         </div>
         <ul class="service-galery-list">
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Gardens">
             <img class="item-img-tablet" src="./assets/img/tabel-768/first.png" alt="first" width="280" height="350">
             <img class="item-img" src="./assets/img/first.png" alt="first" width="329" height="350">
             <div class="item-info">
@@ -104,7 +108,7 @@
               </p>
             </div>
           </li>
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Planting">
             <img class="item-img-tablet" src="./assets/img/tabel-768/second.png" alt="second" width="280" height="350">
             <img class="item-img" src="./assets/img/second.png" alt="second" width="329" height="350">
             <div class="item-info">
@@ -116,7 +120,7 @@
               </p>
             </div>
           </li>
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Lawn">
             <img class="item-img-tablet" src="./assets/img/tabel-768/third.png" alt="third" width="280" height="350">
             <img class="item-img" src="./assets/img/third.png" alt="third" width="329" height="350">
             <div class="item-info">
@@ -128,7 +132,7 @@
               </p>
             </div>
           </li>
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Planting">
             <img class="item-img-tablet" src="./assets/img/tabel-768/fourth.png" alt="fourth" width="280" height="350">
             <img class="item-img" src="./assets/img/fourth.png" alt="fourth" width="329" height="350">
             <div class="item-info">
@@ -140,7 +144,7 @@
               </p>
             </div>
           </li>
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Gardens">
             <img class="item-img-tablet" src="./assets/img/tabel-768/fifth.png" alt="fifth" width="280" height="350">
             <img class="item-img" src="./assets/img/fifth.png" alt="fifth" width="329" height="350">
             <div class="item-info">
@@ -152,7 +156,7 @@
               </p>
             </div>
           </li>
-          <li class="service-galery-item">
+          <li class="service-galery-item" data-service="Planting">
             <img class="item-img-tablet" src="./assets/img/tabel-768/sixth.png" alt="sixth" width="280" height="350">
             <img class="item-img" src="./assets/img/sixth.png" alt="sixth" width="329" height="350">
             <div class="item-info">
@@ -176,9 +180,48 @@
               Prices
             </h2>
             <ul class="prices-list">
-              <li class="prices-item">Basics</li>
-              <li class="prices-item">Standard</li>
-              <li class="prices-item">Pro care</li>
+              <li data-price="Basics" class="prices-item">
+                Basics
+                <div data-price="Basics" class="item-btn"></div>
+                <div class="wrapper-prices-item-content">
+                  <div class="prices-item-content">
+                    <p class="item-content-text">Release of Letraset sheets containing Lorem Ipsum passages, and more
+                      recently</p>
+                    <p class="item-content-price"><span class="price-num"><span class="price-fig">$</span>15</span> /
+                      per
+                      hour</p>
+                    <button class="item-content-btn"><a href="#contact" class="link-btn">Order</a></button>
+                  </div>
+                </div>
+              </li>
+              <li data-price="Standard" class="prices-item">
+                Standard
+                <div data-price="Standard" class="item-btn"></div>
+                <div class="wrapper-prices-item-content">
+                  <div class="prices-item-content">
+                    <p class="item-content-text">Release of Letraset sheets containing Lorem Ipsum passages, and more
+                      recently</p>
+                    <p class="item-content-price"><span class="price-num"><span class="price-fig">$</span>25</span> /
+                      per
+                      hour</p>
+                    <button class="item-content-btn"><a href="#contact" class="link-btn">Order</a></button>
+                  </div>
+                </div>
+              </li>
+              <li data-price="Pro care" class="prices-item">
+                Pro care
+                <div data-price="Pro care" class="item-btn"></div>
+                <div class="wrapper-prices-item-content">
+                  <div class="prices-item-content">
+                    <p class="item-content-text">Release of Letraset sheets containing Lorem Ipsum passages, and more
+                      recently</p>
+                    <p class="item-content-price"><span class="price-num"><span class="price-fig">$</span>35</span> /
+                      per
+                      hour</p>
+                    <button class="item-content-btn"><a href="#contact" class="link-btn">Order</a></button>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="prices-right-column">
@@ -192,17 +235,93 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section id="contact" class="contacts">
       <div class="container">
         <div class="contacts-row">
-          <h2 id="contacts" class="contacts-title-tablet">Contact us</h2>
+          <h2 class="contacts-title-tablet">Contact us</h2>
           <img class="contact-img" src="./assets/img/contact-woman.png" alt="contact-woman" width="400" height="497">
-          <h2 id="contacts" class="contacts-title">Contact us</h2>
-          <select class="contacts-list">
-            <option class="contacts-item">City</option>
-            <option class="contacts-item">Пункт 1</option>
-            <option class="contacts-item">Пункт 2</option>
-          </select>
+          <h2 class="contacts-title">Contact us</h2>
+          <div class="contacts-container">
+            <div class="contacts-header-row ">
+              <div class="contacts-header">
+                <div class="contacts-header-name">City</div>
+                <div class="contacts-header-img"></div>
+              </div>
+              <div class="contacts-list">
+                <div class="contacts-item">Canandaigua, NY</div>
+                <div class="contacts-item">New York City</div>
+                <div class="contacts-item">Yonkers, NY</div>
+                <div class="contacts-item">Sherrill, NY</div>
+              </div>
+              <ul class="contact-cards-list">
+                <li class="contact-card-item" data-city="Canandaigua, NY">
+                  <div class="item-row">
+                    <div class="item-column-left">
+                      <p>City:</p>
+                      <p>Phone:</p>
+                      <p>Office adress:</p>
+                    </div>
+                    <div class="item-column-right">
+                      <p>Canandaigua, NY</p>
+                      <p>+1 585 393 0001</p>
+                      <p>151 Charlotte Street</p>
+                    </div>
+                  </div>
+                  <button class="item-button" type="button"><a class="item-button-call" href="tel:+15853930001">Call
+                      us</a></button>
+                </li>
+                <li class="contact-card-item" data-city="New York City">
+                  <div class="item-row">
+                    <div class="item-column-left">
+                      <p>City:</p>
+                      <p>Phone:</p>
+                      <p>Office adress:</p>
+                    </div>
+                    <div class="item-column-right">
+                      <p>New York City</p>
+                      <p>+1 212 456 0002</p>
+                      <p>9 East 91st Street</p>
+                    </div>
+                  </div>
+                  <button class="item-button" type="button"><a class="item-button-call" href="tel:+15853930001">Call
+                      us</a></button>
+                </li>
+                <li class="contact-card-item" data-city="Yonkers, NY">
+                  <div class="item-row">
+                    <div class="item-column-left">
+                      <p>City:</p>
+                      <p>Phone:</p>
+                      <p>Office adress:</p>
+                    </div>
+                    <div class="item-column-right">
+                      <p>Yonkers, NY</p>
+                      <p>+1 914 678 0003</p>
+                      <p>511 Warburton Ave</p>
+                    </div>
+                  </div>
+                  <button class="item-button" type="button"><a class="item-button-call" href="tel:+15853930001">Call
+                      us</a></button>
+                </li>
+                <li class="contact-card-item" data-city="Sherrill, NY">
+                  <div class="item-row">
+                    <div class="item-column-left">
+                      <p>City:</p>
+                      <p>Phone:</p>
+                      <p>Office adress:</p>
+                    </div>
+                    <div class="item-column-right">
+                      <p>Sherrill, NY</p>
+                      <p>+1 315 908 0004</p>
+                      <p>14 WEST Noyes BLVD</p>
+                    </div>
+                  </div>
+                  <button class="item-button" type="button"><a class="item-button-call" href="tel:+15853930001">Call
+                      us</a></button>
+                </li>
+              </ul>
+            </div>
+
+          </div>
           <img class="contact-img-tablet" src="./assets/img/contact-woman.png" alt="contact-woman" width="200"
             height="248.5">
         </div>
