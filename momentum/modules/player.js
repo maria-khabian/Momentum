@@ -5,7 +5,12 @@ const audio = new Audio();
 const buttonPlay = document.querySelector('.play');
 const buttonPrev = document.querySelector('.play-prev');
 const buttonNext = document.querySelector('.play-next');
+const timeAudio = document.querySelector('.time-audio');
+const nameAudio = document.querySelector('.name-audio')
 const playListContainer = document.querySelector('.play-list');
+
+nameAudio.textContent = playList[0].title;
+timeAudio.textContent = playList[0].duration;
 
 //флаг для проверки (включена музыка true, выключена - false);
 let isPlay = false;
@@ -47,6 +52,8 @@ const playAudio = (playNum = 0) => {
     audio.play();
     buttonPlay.classList.add('pause')
     isPlay = true;
+    nameAudio.textContent = playList[playNum].title
+    timeAudio.textContent = playList[playNum].duration
 }
 // останавливает проигрывание плеера
 const pauseAudio = () => {
