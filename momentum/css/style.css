@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Arial-MT';
-  src: url("../assets/fonts/Arial-MT.woff"); /* Путь к файлу со шрифтом */
- }
+  src: url("../assets/fonts/Arial-MT.woff");
+  /* Путь к файлу со шрифтом */
+}
 
 * {
   box-sizing: border-box;
@@ -17,6 +18,7 @@ body {
   color: #fff;
   text-align: center;
   background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background-image: url("../assets/img/bg.jpg");
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }
@@ -27,7 +29,7 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 30vh;
-  min-height: 220px;  
+  min-height: 220px;
   padding: 20px;
 }
 
@@ -58,15 +60,17 @@ body {
 }
 
 .play-item::before {
-  content: "\2713";  
+  content: "\2713";
   position: absolute;
   left: 0;
   top: 2px;
   font-weight: 900;
+  opacity: .5;
 }
 
 .item-active::before {
-  color: #C5B358;
+  color: #ffffff;
+  opacity: 1;
 }
 
 .player-icon,
@@ -82,7 +86,7 @@ body {
   outline: 0;
   opacity: .8;
   cursor: pointer;
-  transition: .3s;  
+  transition: .3s;
 }
 
 .player-icon:hover,
@@ -95,7 +99,7 @@ body {
 .slider-icon:active,
 .change-quote:active {
   border: 0;
-  outline: 0;  
+  outline: 0;
   transform: scale(1.1);
 }
 
@@ -125,7 +129,7 @@ body {
   align-items: flex-start;
   row-gap: 5px;
   width: 180px;
-  min-height: 180px;  
+  min-height: 180px;
   text-align: left;
 }
 
@@ -141,6 +145,10 @@ body {
   column-gap: 12px;
 }
 
+.temperature {
+  margin-bottom: 15px;
+}
+
 .weather-icon {
   font-size: 44px;
 }
@@ -151,14 +159,14 @@ body {
   padding: 5px;
   font-size: 20px;
   line-height: 24px;
-  color: #fff;  
+  color: #fff;
   border: 0;
   outline: 0;
   border-bottom: 1px solid #fff;
   background-color: transparent;
 }
 
-.city::placeholder {  
+.city::placeholder {
   font-size: 20px;
   color: #fff;
   opacity: .6;
@@ -172,7 +180,7 @@ body {
   align-items: center;
   width: 100%;
   height: 40vh;
-  min-height: 260px;  
+  min-height: 260px;
   padding: 20px;
 }
 
@@ -198,7 +206,7 @@ body {
   margin-bottom: 10px;
   font-family: 'Arial-MT';
   font-size: 100px;
-  letter-spacing: -4px;  
+  letter-spacing: -4px;
 }
 
 .date {
@@ -218,7 +226,7 @@ body {
 }
 
 .greeting {
-  flex: 1;  
+  flex: 1;
   padding: 10px;
   text-align: right;
 }
@@ -247,27 +255,68 @@ body {
   align-items: center;
   width: 100%;
   height: 30vh;
-  min-height: 160px;  
+  min-height: 160px;
   padding: 20px;
+}
+
+.footer-gh {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link-GitNub {
+  opacity: 0.5;
+}
+
+.footer-year {
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.footer-link-RsSchool {
+  opacity: 0.6;
 }
 
 .change-quote {
   margin-bottom: 30px;
-  background-image: url("../assets/svg/reload.svg");  
+  background-image: url("../assets/svg/reload.svg");
 }
 
 .quote {
+  position: relative;
+  font-style: italic;
   min-height: 32px;
+  font-size: 18px;
+}
+
+.quote::before {
+  content: '❝';
+  position: absolute;
+  left: -15px;
+  top: -5px;
+}
+
+.quote::after {
+  content: '❞';
+  position: absolute;
+  right: -10px;
+  top: -5px;
 }
 
 .author {
   min-height: 20px;
+  /* font-weight: 700; */
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
-    font-size: 72px;    
+    font-size: 72px;
   }
 
   .greeting-container {
