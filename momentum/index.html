@@ -14,6 +14,10 @@
 <body class="body">
   <header class="header">
     <div class="player">
+      <div class="description-audio">
+        <span class="time-audio"></span>
+        <span class="name-audio"></span>
+      </div>
       <div class="player-controls">
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
@@ -24,11 +28,15 @@
     </div>
     <div class="weather">
       <input type="text" class="city" />
-      <i class="weather-icon owf"></i>
+      <div class="weather-info">
+        <i class="weather-icon owf"></i>
+        <span class="weather-description"></span>
+      </div>
       <div class="weather-error"></div>
       <div class="description-container">
-        <span class="temperature"></span>
-        <span class="weather-description"></span>
+        <p>Temperature: <span class="temperature"></span></p>
+        <p>Wind speed: <span class="wind-speed"></span></p>
+        <p>Relative humidity: <span class="relative-humidity"></span></p>
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>

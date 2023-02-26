@@ -1,6 +1,8 @@
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
+const windSpeed = document.querySelector('.wind-speed');
+const relativeHumidity = document.querySelector('.relative-humidity');
 const inputCity = document.querySelector('.city');
 
 inputCity.addEventListener('change', () => {
@@ -19,6 +21,7 @@ const setLocalStorage = () => {
 const getLocalStorage = () => {
     if(localStorage.getItem('city')) {
         inputCity.value = localStorage.getItem('city');
+        getWeather(inputCity.value)
     }
   }
 
@@ -29,7 +32,7 @@ async function getWeather (city = 'Минск') {
 
     inputCity.value = city;
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=8bd932aae140c2c39a3cd0056e7ff1b1&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&appid=8bd932aae140c2c39a3cd0056e7ff1b1&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
 
@@ -37,6 +40,9 @@ async function getWeather (city = 'Минск') {
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
     temperature.textContent = `${data.main.temp}°C`;
     weatherDescription.textContent = data.weather[0].description;
+    // console.log(Math.ceil(data.main.humidity))
+    windSpeed.textContent = `${Math.ceil(data.wind.speed)} m/s`
+    relativeHumidity.textContent = `${Math.ceil(data.main.humidity)} %`
     
 }
 export {getWeather}
