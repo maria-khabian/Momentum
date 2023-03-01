@@ -54,6 +54,7 @@ const playAudio = (playNum = 0) => {
     isPlay = true;
     nameAudio.textContent = playList[playNum].title
     timeAudio.textContent = playList[playNum].duration
+    activeAudio(playList[playNum].title)
 }
 // останавливает проигрывание плеера
 const pauseAudio = () => {
