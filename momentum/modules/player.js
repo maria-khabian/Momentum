@@ -1,16 +1,19 @@
 import playList from './playList.js';
 
 const audio = new Audio();
+console.log(audio);
+
 
 const buttonPlay = document.querySelector('.play');
 const buttonPrev = document.querySelector('.play-prev');
 const buttonNext = document.querySelector('.play-next');
-const timeAudio = document.querySelector('.time-audio');
+const timeAudioDuration = document.querySelector('.time-audio-duration');
+const timeAudioCurrent = document.querySelector('.time-audio-current');
 const nameAudio = document.querySelector('.name-audio')
 const playListContainer = document.querySelector('.play-list');
 
 nameAudio.textContent = playList[0].title;
-timeAudio.textContent = playList[0].duration;
+timeAudioDuration.textContent = playList[0].duration;
 
 //флаг для проверки (включена музыка true, выключена - false);
 let isPlay = false;
@@ -53,7 +56,7 @@ const playAudio = (playNum = 0) => {
     buttonPlay.classList.add('pause')
     isPlay = true;
     nameAudio.textContent = playList[playNum].title
-    timeAudio.textContent = playList[playNum].duration
+    timeAudioDuration.textContent = playList[playNum].duration
     activeAudio(playList[playNum].title)
 }
 // останавливает проигрывание плеера
@@ -61,6 +64,12 @@ const pauseAudio = () => {
   audio.pause();
   buttonPlay.classList.remove('pause')
   isPlay = false;
+}
+
+//воспроизведение аудио по кругу
+//Событие ended происходит, когда аудио/видео достиг конца.
+audio.onended = () => {
+  playNext();
 }
 
 const activeAudio = (titleAudio) => {
