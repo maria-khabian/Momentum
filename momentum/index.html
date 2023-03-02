@@ -14,15 +14,31 @@
 <body class="body">
   <header class="header">
     <div class="player">
-      <div class="description-audio">
-        <span class="time-audio"></span>
-        <span class="name-audio"></span>
+      <div class="audio-player">
+        <div class="audio-player-top">
+          <span class="name-audio"></span>
+          <div class="description-audio">
+            <span class="time-audio-current">00:40</span>
+            <div class="time-divider"> / </div>
+            <span class="time-audio-duration"></span>
+          </div>
+        </div>
+        <div class="audio-timeline">
+          <div class="timeline">
+            <div class="progres"></div>
+          </div>
+          <div class="timeline">
+            <input class="timeline__progress" type="range" min="0" max="100" step="0.1" value="0">
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
       </div>
-      <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
-      </div>
+
       <ul class="play-list">
       </ul>
     </div>
@@ -32,7 +48,7 @@
         <i class="weather-icon owf"></i>
         <span class="weather-description"></span>
       </div>
-      <div class="weather-error"></div>
+      <div class="weather-error">Такого города не существует!</div>
       <div class="description-container">
         <p>Temperature: <span class="temperature"></span></p>
         <p>Wind speed: <span class="wind-speed"></span></p>
