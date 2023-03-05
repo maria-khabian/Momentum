@@ -1,7 +1,7 @@
 const playList = [
     {      
       title: 'Down',
-      src: './assets/sounds/Down.mp3',
+      src: './assets/sounds/Down2.mp3',
       duration: '00:40'
     },  
     {      

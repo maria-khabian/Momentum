@@ -8,7 +8,6 @@ let randomNum = getRandomNum(1, 21);
 
 // timeOfDay = getTimeOfDay(), bgNum = randomNum.toString()
 async function setBg (bgNum = randomNum) {
-    console.log('first img')
     const timeOfDay = getTimeOfDay();
     const bgRundNum = bgNum.toString().padStart(2, '0');
     // создаем объект изображения
